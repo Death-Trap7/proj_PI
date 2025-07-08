@@ -1,0 +1,34 @@
+{% extends 'Home.html' %}
+{% block 'contact' %}
+
+<h3>Pls fill your contact details</h3>
+<div class="container mt-2">
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="id_name" class="form-label">Name: </label>
+        {{forms.name}}
+
+        <label for="id_emailid" class="form-label">Email: </label>
+        {{forms.emailid}}
+
+        <label for="id_mobileNumber" class="form-label">Contact No: </label>
+        {{forms.mobileNumber}}
+
+        <label for="id_gender" class="form-label">Gender: </label>
+        {{forms.gender}}
+
+        <label for="id_DOB" class="form-label">Date of Birth: </label>
+        {{forms.DOB}}
+
+        <label for="id_country" class="form-label">Country: </label>
+        {{forms.country}}
+
+        <label for="id_bio" class="form-label">Bio: </label>
+        {{forms.bio}}
+
+        <input class="btn btn-primary mt-2" type="submit">
+
+    </form>
+</div>
+
+{% endblock %}
